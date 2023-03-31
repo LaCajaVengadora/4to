@@ -1,0 +1,17 @@
+//Al igual que la tabla AUTOS, para mostrar ciertos campos sería: SELECT Grupo, Nombre, ... FROM QUIMICA
+
+//Consulta 1
+SELECT * FROM QUIMICA
+WHERE Grupo='2A' OR Grupo='3A';
+
+//Consulta 2
+SELECT * FROM QUIMICA
+WHERE Clasificacion='Metal' ORDER BY NumAtomico;
+
+//Consulta 3
+SELECT * FROM QUIMICA
+WHERE Nombre Like "C*" OR Nombre Like "M*";
+
+//Consulta 4
+SELECT * FROM QUIMICA
+WHERE NumAtomico Between 9 And 20;
