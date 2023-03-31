@@ -1,0 +1,34 @@
+//Se seleccionan todos los elementos de la tabla AUTOS pero si se quiere mostrar solo algunos, basta con poner SELECT Precio, Marca, ... FROM AUTOS
+
+//Consulta 1
+SELECT * FROM AUTOS WHERE Marca='Renault';
+
+//Consulta 2
+SELECT * FROM AUTOS 
+WHERE Marca='Renault' AND Agno Between 1990 And 1994;
+
+//Consulta 3
+SELECT * FROM AUTOS WHERE Puertas=2;
+
+//Consulta 4
+SELECT * FROM AUTOS 
+WHERE Patente Like "B*";
+
+//Consulta 5
+SELECT * FROM AUTOS
+WHERE Color='Rojo' Or Color='Blanco' ORDER BY Agno; // sin DESC es ascendente, con, descendente
+ 
+//Consulta 6
+SELECT * FROM AUTOS
+WHERE Precio Between 8000 And 10000;
+
+//Consulta 7
+SELECT * FROM AUTOS WHERE Kilometros<2000;
+
+//Consulta 8
+SELECT * FROM AUTOS
+WHERE Precio<6000 AND (Marca='Peugeot' OR Marca='Renault');
+
+//Consulta 9
+SELECT * FROM AUTOS
+WHERE Agno<1990 AND (Marca='Fiat' OR Marca='Ford');
