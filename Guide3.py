@@ -98,3 +98,8 @@ elif n<0 and n%2==0: print(f"{n} es negativo y par")
 elif n>0 and n%2!=0: print(f"{n} es positivo e impar")
 elif n<0 and n%2!=0: print(f"{n} es negativo e impar")
 else: print("0 es neutro y par")
+
+#3N TODO-------------------------------------------------
+a = float(input("Ingrese A (coeficiente principal): "))
+b = float(input("Ingrese B (coeficiente lineal): "))
+c = float(input("Ingrese C (término indepentiente): "))
