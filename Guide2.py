@@ -43,18 +43,28 @@ min = trueSeg//60; seg = trueSeg%60
 hrs = min//60; min%=60
 print(f"{trueSeg} segunds son {hrs} horas; {min} minutos y {seg} segundos")'''
 
-DNI = input("Introduce tu DNI: "); g = input("Introduce si naciste siendo hombre o mujer (h/m): ")
-if g=='h': first='20'
-elif g=='m': first='27'
-else: print("Todo bien, pero no podemos calcularlo"); error=True
-if error:
-    pass
-else:
-    CUIL=first+DNI
+#2K
+def calculoCUIL(f, DNI):
+    CUIL=f+DNI
     InvCUIL=CUIL[::-1]; ver=0; count=0
     for i in [2,3,4,5,6,7,2,3,4,5]:
         nCUIL=int(InvCUIL[count]); count+=1
         ver+=(i*nCUIL)
     ver%=11; ver=11-ver
-    CUIL+=str(ver)
-    print(CUIL)
+    if ver==10:
+        CUIL=calculoCUIL('23',DNI)
+    else:
+        if ver ==11:
+            ver=0
+        CUIL+=str(ver)
+    return CUIL
+
+DNI = input("Introduce tu DNI: "); g = input("Introduce si naciste siendo hombre o mujer (h/m): ")
+if g=='h': first='20'; error=False
+elif g=='m': first='27'; error=False
+else: print("Todo bien, pero no podemos calcularlo"); error=True
+
+if error:
+    pass
+else:
+    print(calculoCUIL(first, DNI))
