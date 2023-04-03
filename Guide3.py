@@ -50,3 +50,51 @@ elif shape.upper()=="C":
     print(f"El área de ese círculo es de {round(r*r*pi,2)}cm²")
 else:
     print("Poné C o T")
+
+#3I
+n1 = float(input("Ingrese el primer número: ")); n2 = float(input("Ingrese el segundo número: "))
+if n1>n2: print(f"{n1} es mayor que {n2}")
+elif n1<n2: print(f"{n2} es mayor que {n1}")
+else: print(f"{n1} y {n2} son iguales")
+  
+#3J
+agnoNow = int(input("Ingrese el año actual: ")); agnoThen = int(input("Ingrese un año cualquiera: "))
+if agnoNow>agnoThen:
+    print(f"Estando en {agnoNow}",end=" ")
+    if agnoNow-agnoThen==1: print(f"ha pasado 1 año desde {agnoThen}")
+    else: print(f"han pasado {agnoNow-agnoThen} años desde {agnoThen}")
+elif agnoThen>agnoNow:
+    print(f"Estando en {agnoNow}",end=" ")
+    if agnoThen-agnoNow==1: print(f"falta 1 año para {agnoThen}")
+    else: print(f"faltan {agnoThen-agnoNow} años para {agnoThen}")
+else:
+    print(f"{agnoNow} es el mismo año que {agnoThen}")
+    
+#3K
+n1 = int(input("Ingrese el primer número: ")); n2 = int(input("Ingrese el segundo número: "))
+if n1<=0 or n2<=0:
+    print("No se aceptan números negativos o 0")
+else:
+    if n1>n2: 
+        mayor=n1;menor=n2
+    elif n1<n2:
+        mayor=n2;menor=n1
+    else:
+        mayor=n1; menor=n1
+        print("Son el mismo número. Aún asi,",end=" ")
+    if mayor%menor==0: print(f"{mayor} es múltiplo de {menor}")
+    else: print(f"{mayor} NO es múltiplo de {menor}")
+
+#3L
+n1 = float(input("Ingrese el primer número: ")); n2 = float(input("Ingrese el segundo número: ")); n3 = float(input("Ingrese el tercer número: "))
+if n1==n2 and n2==n3: print("Los tres números son iguales")
+elif n1==n2 or n2==n3 or n1==n3: print("Hay dos números iguales")
+else: print("Los tres números son distintos")
+ 
+#3M
+n = int(input("Ingrese un número: "))
+if n>0 and n%2==0: print(f"{n} es positivo y par")
+elif n<0 and n%2==0: print(f"{n} es negativo y par")
+elif n>0 and n%2!=0: print(f"{n} es positivo e impar")
+elif n<0 and n%2!=0: print(f"{n} es negativo e impar")
+else: print("0 es neutro y par")
