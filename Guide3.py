@@ -40,4 +40,13 @@ try:
 except ZeroDivisionError: print("No se puede dividir por 0")
 
 #3H
-
+from math import pi
+shape = input("Ingrese si quiere calcular el área de un círculo o un triángulo (C / T): ")
+if shape.upper()=="T":
+    b = float(input("Ingrese la base del triángulo (cm): ")); h = float(input("Ingrese la altura del triángulo (cm): "))
+    print(f"El área de ese triángulo es de {b*h/2}cm²")
+elif shape.upper()=="C":
+    r = float(input("Ingrese el radio del círculo (cm): "))
+    print(f"El área de ese círculo es de {round(r*r*pi,2)}cm²")
+else:
+    print("Poné C o T")
