@@ -99,7 +99,66 @@ elif n>0 and n%2!=0: print(f"{n} es positivo e impar")
 elif n<0 and n%2!=0: print(f"{n} es negativo e impar")
 else: print("0 es neutro y par")
 
-#3N TODO-------------------------------------------------
+#3N
+from math import sqrt
 a = float(input("Ingrese A (coeficiente principal): "))
+while(a==0): a = float(input("En una función cuadrática, A no puede ser 0. Ingrese A otra vez"))
 b = float(input("Ingrese B (coeficiente lineal): "))
 c = float(input("Ingrese C (término indepentiente): "))
+print(f"La cuenta sería: {a}x² + {b}x + {c}\n")
+dis = b*b-4*a*c;
+if dis<0: print("La función no posee raices reales")
+elif dis==0: 
+    print("La única raíz de la función es", end=" ")
+    root=b*(-1)/(2*a)
+    print(f"x={round(root,2)}")
+else:
+    print(f"Las raices de la función son", end=" ")
+    x1=(b*(-1)+sqrt(dis))/(2*a); x2=(b*(-1)-sqrt(dis))/(2*a)
+    print(f"x1={round(x1,2)} y x2={round(x2,2)}")
+   
+#3Ñ
+agno = int(input("Ingrese un año: "))
+if agno%4==0:
+    if agno%100==0:
+        if agno==400:
+            print(f"{agno} SI es bisiesto")
+        else:
+            print(f"{agno} NO es bisiesto")
+    else:
+        print(f"{agno} SI es bisiesto")
+else:
+    print(f"{agno} NO es bisiesto")
+
+#3O
+a = float(input("Ingrese un ánuglo del triángulo: "))
+b = float(input("Ingrese el otro ánuglo del triángulo: "))
+c = float(input("Ingrese el último ánuglo del triángulo: "))
+
+if a+b+c!=180: print("No suman 180°, tu triángulo no lo es")
+else:
+    if a<90 and b<90 and c<90: print("Tu triángulo es un triángulo acutángulo")
+    elif a==90 or b==90 or c==90: print("Tu triángulo es un triángulo rectángulo")
+    else: print("Tu triángulo es un triángulo obtusángulo")
+      
+#3P
+n1 = float(input("Ingrese su primera nota: ")); n2 = float(input("Ingrese su segunda nota: "))
+if (n1+n2)/2<7: print("Debés rendir el final"); final=True
+else: print("No rendís final, aprobaste"); final=False
+if final:
+    nf = float(input("Ingrese la nota del final: "))
+    if nf<4: print("No pasaste el CBC")
+    else: print("Zafaste, apenas...")
+      
+#3Q
+edad = int(input("Introdusca su edad: "))
+if 17<edad<71: print("Usted puede conducir")
+elif 15<edad<18: 
+    permiso=input("Tenés permiso de tus padres? (y/n) ")
+    if permiso.upper()=='Y': print("Usted puede conducir")
+    else: print("Es muy chico para conducir")
+elif 70<edad:
+    permiso=input("Pasó el examen psicofísico? (y/n) ")
+    if permiso.upper()=='Y': print("Usted puede conducir")
+    else: print("Está loco, mediquesé")
+else: print("Es muy chico para conducir")
