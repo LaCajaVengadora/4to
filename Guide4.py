@@ -114,8 +114,14 @@ for i in range(n):
     count*=i+1
 print(count)
 
-#4L
 #4M
+from math import fabs
+n1 = float(input("Ingrese el lado 1: ")); n2 = float(input("Ingrese el lado 2: ")); n3 = float(input("Ingrese el lado 3: "))
+if n1<n2+n3 and n1>fabs(n2-n3) and n2<n1+n3 and n3>fabs(n1-n2) and n1<n2+n3 and n3>fabs(n2-n1):
+    print("Los lados forman un triángulo")
+else: print("Los lados NO forman un triángulo")
+
+---------------------TO-DO-----------------------
 #4N
 #4Ñ
 #4O
