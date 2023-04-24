@@ -6,14 +6,14 @@ value = choice(("cara", "ceca")); print(value)
 if elc == value: print("Ganaste")
 else: print("Perdiste")
   
-#3C
+#4C
 from random import c randrange
 n = int(input("Elige un numero entre 0 y 10 (más facil asi)")); 
 trueN = randrange(1,11)
 if n==trueN: print(f"Correcto, era {n}")
 else: print(f"Incorrecto, era {trueN}")
   
-#3D
+#4D
 from random import randint
 nT = randint(1,6); print(f"Tomás ha sacado {nT}")
 nL = randint(1,6); print(f"Lucia ha sacado {nL}")
@@ -21,7 +21,7 @@ if nT<nL: print("Ha ganado Lucia")
 elif nT>nL: print("Ha ganado Tomás")
 else: print("Empataron")
   
-#3E
+#4E
 from random import randint
 
 def getMax(a,b):
@@ -37,7 +37,7 @@ elif getMax(O1,O2)>getMax(J1,J2): print("Ha ganado Oriana")
 elif getMax(O1,O2)<getMax(J1,J2): print("Ha ganado Julian")
 else: print("Empate")
   
-#3F
+#4F
 from random import randint
 def getMax(a,b): ...
 def getMin(a,b): ...
@@ -49,7 +49,7 @@ elif getMin(H1,H2)>getMin(N1,N2): print("Ha ganado Helena")
 elif getMin(H1,H2)<getMin(N1,N2): print("Ha ganado Nehuen")
 else: print("Empate")
   
-#3G
+#4G
 from random import randint
 E1 = randint(1,10); E2 = randint(1,10); E3 = randint(1,10)
 print(f"Evangelina ha sacado {E1} , {E2} y {E3}"); allE = E1+E2+E3
@@ -62,7 +62,7 @@ elif allS>allE: print("Gana Simon")
 elif allS<allE: print("Gana Evangelina")
 else: print("Empate, sacaron lo mismo")
   
-#3H
+#4H
 from random import choice
 userPick = input("Ingrese piedra, papel o tijeras").lower()
 randomPick = choice(("piedra", "papel", "tijeras")); print(randomPick)
@@ -78,7 +78,7 @@ elif userPick=="papel":
     else: print("Ganaste")
 else: print("PIEDRA , PAPEL o TIJERAS")
   
-#3I
+#4I
 from random import choice
 userPick = input("Ingrese piedra, papel, tijeras, lagarto o spock").lower()
 randomPick = choice(("piedra", "papel", "tijeras", "lagarto", "spock")); print(randomPick)
@@ -100,10 +100,22 @@ elif userPick=="spock":
     if randomPick=="papel" or randomPick=="lagarto": print("Perdiste")
     else: print("Ganaste")
 else: print("PIEDRA , PAPEL , TIJERAS , LAGARTO o SPOCK")
-#3J YA HECHO
-#3K
-#3L
-#3M
-#3N
-#3Ñ
-#3O
+#4J YA HECHO
+
+#4K
+from math import sin, radians
+n = float(input("Ingrese un n: ")); print(sin(radians(n)))
+
+#4L
+from math import factorial
+n = int(input("Ingrese un n: ")); print(factorial(n)) #O SINO....
+count = 1 
+for i in range(n):
+    count*=i+1
+print(count)
+
+#4L
+#4M
+#4N
+#4Ñ
+#4O
