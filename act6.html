@@ -11,43 +11,45 @@
     <div class="row"> <div class="col hTop" style="font-style: italic; height: 50px;">Header</div></div>
 
     <div class="row">
-        <div class="col col-md-4 col-sm-6 col-xs-12 col1 bigCols" style="height: 100px;">1</div>
+        <div class="col col-md-4 col-sm-6 col-xs-12 col1 bigCols">1</div>
         <div class="w-100 d-sm-none d-block"></div>
-        <div class="col col-md-4 col-sm-6 col-xs-12 col2 bigCols" style="height: 100px;">2</div>
+        <div class="col col-md-4 col-sm-6 col-xs-12 col2 bigCols">2</div>
         <div class="w-100 d-sm-none d-block"></div>
-        <div class="col col-md-4 col-sm-12 col-xs-12 col3 bigCols" style="height: 100px;">3</div>
+        <div class="col col-md-4 col-sm-12 col-xs-12 col3 bigCols">3</div>
     </div>
     <div class="row">
-        <div class="col-md-6 col-sm-12 col foot1" style="background-color: darkgoldenrod; font-style: italic; height: 50px;">Footer 1</div>
-        <div class="col-md-6 col-sm-12 col foot2" style="background-color: darkgoldenrod; font-style: italic; height: 50px;">Footer 2</div>
+        <div class="col-md-6 col-sm-12 col-xs-12 col foot1" style="background-color: darkgoldenrod; font-style: italic; height: 50px;">Footer 1</div>
+        <div class="w-100 d-block d-sm-none d-md-none"></div>
+        <div class="col-md-6 col-sm-12 col-xs-12 col foot2" style="background-color: darkgoldenrod; font-style: italic; height: 50px;">Footer 2</div>
     </div>
 </body>
 <style>
-    .row{border: 2px solid white} .col{border: 2px solid white; font-size: 25px;}
-    .bigCols{font-weight: bold; font-size: 60px;}
+    .row{border: 2px solid white} .col{border: 2px solid white; font-size: 25px;} .bigCols{font-weight: bold; font-size: 60px;}
+    
     @media screen and (min-width: 0px){ /* XS */
         .hTop{ background-color:rgb(255, 190, 125); text-align: center;}
         /*columnas*/
         .col1{ text-align: left; background-color: rgb(200, 0, 0)}
         .col2{ text-align: center; background-color: rgb(0, 214, 252)}
         .col3{ text-align: right; background-color: rgb(200, 0, 0)}
+        .foot1{ text-align: center;} .foot2{ text-align: center;}
         
     }
     @media screen and (min-width: 576px){ /* SM */
         .hTop{ background-color:rgb(0, 214, 252); text-align: left;}
         /*columnas*/
-        .col1{ text-align: left; background-color: rgb(200, 0, 0)}
-        .col2{ text-align: right; background-color: rgb(200, 0, 0)}
-        .col3{ text-align: center; background-color: rgb(0, 255, 0)}
+        .col1{ text-align: left; background-color: rgb(200, 0, 0); height: 100px; display:block}
+        .col2{ text-align: right; background-color: rgb(200, 0, 0); height: 100px; display:block}
+        .col3{ text-align: center; background-color: rgb(0, 255, 0); height: 100px; display:block}
         /*footer*/
         .foot1{ text-align: center;} .foot2{ text-align: center;}
     }
     @media screen and (min-width: 768px){ /* MD */
         .hTop{ background-color:rgb(0, 255, 0);}
-        /*columnas*/
-        .col1{ text-align: center; background-color: rgb(200, 0, 0)}
-        .col2{ text-align: center; background-color: rgb(200, 0, 0)}
-        .col3{ text-align: center; background-color: rgb(200, 0, 0)}
+        /*columnas, ACA no creo debería aplicarse el display flex porque en la img del camups no aparece así*/
+        .col1{ text-align: center; background-color: rgb(200, 0, 0); height: 200px; display: flex; align-items: center; justify-content: center;}
+        .col2{ text-align: center; background-color: rgb(200, 0, 0); height: 200px; display: flex; align-items: center; justify-content: center;}
+        .col3{ text-align: center; background-color: rgb(200, 0, 0); height: 200px; display: flex; align-items: center; justify-content: center;}
         /*footer*/
         .foot1{ text-align: right;} .foot2{ text-align: left;}
     }
