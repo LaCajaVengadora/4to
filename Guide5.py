@@ -95,5 +95,32 @@ for i in range(cant):
 print(f"Alumnos en el nivel 1: {lv1}\nAlumnos en el nivel 2: {lv2}\nAlumnos en el nivel 3: {lv3}")
 
 #5L
+count = 3
+for i in range(count-1):
+    count*=(i+1)
+    print(count)
+    
+
+#5L v2
+n = int(input("Ingrese hasta que número de términos quiere realizar la sucesión de Fibonacci: "))
+count = 1; pre = 0
+for i in range(n):
+    print(count)
+    count+=pre; pre=count-pre
+    
 #5M
+n = int(input("Ingrese la cantidad de renglones: "))
+for i in range(n+1): # a
+    for j in range(i):
+        print("*", end="")
+    print()
+for i in range(n+1): # b
+    for j in range(i):
+        print(j+1, end="")
+    print()
+
 #5N
+#5Ñ
+#5O
+#5P
+#5Q
