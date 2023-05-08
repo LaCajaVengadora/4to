@@ -118,9 +118,19 @@ for i in range(n+1): # b
     for j in range(i):
         print(j+1, end="")
     print()
+for i in range(n,0,-1): # c
+    for j in range(i):
+        print("*", end="")
+    print()
+for i in range(n,0,-1): # d
+    for j in range(i,0,-1):
+        print(j, end="")
+    print()
+for i in range(n+1): # e y f A RESOLVER
+    for j in range(i):
+        p = "*"
+        for k in range(j):p+="*"
+        print(p, end="")
+    print()
 
-#5N
-#5Ñ
-#5O
-#5P
-#5Q
+#5N A RESOLVER TAMBIEN
