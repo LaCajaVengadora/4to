@@ -66,10 +66,13 @@ def getPrimos(n):
     full.reverse()
     return full
 
-num = int(input("Escriba un número mayor que 1: "))
+num = int(input("Escriba un número mayor que 1: ")); pre = num
 print("Descomposición en factores primos: ");
+print(getPrimos(num))
 for i in getPrimos(num):
-    pass
+    if pre%i==0: 
+        print(f"{pre} {i}")
+        pre/=i
 #6G
 #6H
 #6I
