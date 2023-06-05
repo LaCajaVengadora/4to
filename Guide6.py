@@ -78,5 +78,47 @@ while not end:
             if tester==1:break
             print(f" | {i}")
 #6G
+n = float(input("Ingrese un número: "))   
+while True:
+    current = float(input(f"Ingrese un número mayor que {n}: "))
+    if current<=n:
+        print(f"{current} no es mayor que {n}")
+        break
+        
 #6H
+n = int(input("Ingrese un número: "))
+while True:
+    current = int(input(f"Ingrese un número mayor que {n}: "))
+    if current<=n:
+        print(f"{current} no es mayor que {n}")
+        break
+    n=current
+    
 #6I
+n = int(input("Ingrese un número positivo: "))
+while n<=0: n = int(input("Ingrese un número POSITIVO: "))
+pos = 0; neg = 0; cero = 0
+for i in range(n):
+    num = int(input(f"Ingrese un número (vez {i+1}): "))
+    if num>0:pos+=1
+    elif num<0:neg+=1
+    else:cero+=1
+print(f"Ha introducido {n} números, {pos} de ellos es/son positivo/s")
+
+#6J
+suma=0
+while True:
+    n = int(input("Escriba un número: "))
+    if n>=0: suma+=n
+    else: break
+print(f"Suma de todos los números (menos el negativo): {suma}")
+
+#6K
+n = float(input("Ingrese un número positivo límite: ")); suma=0
+while n<=0: n = float(input("Ingrese un número POSITIVO: "))
+while suma<n:
+    suma += float(input("Ingrese un número"))
+print("Has superado el límite")
+#6L
+#6M
+#6N
