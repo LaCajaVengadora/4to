@@ -54,25 +54,29 @@ for i in range(n):
     if divisores==2 or divisores==1: print(i+1)
     Lista = []; divisores = 0
     
-#6F
-def getPrimos(n):
-    ex = []; full = []; divisores = 0
+#6F EN TEORÍA...
+def trueGetter(n):
+    divisores = []; primos = []
     for i in range(n):
-        for j in range(i+1): 
-            if (i+1)%(j+1)==0: ex.append(j+1)
-        for k in ex: divisores+=1
-        if divisores==2 or divisores==1: full.append(i+1)
-        ex = []; divisores = 0
-    full.reverse()
-    return full
+       if n%(i+1)==0: divisores.append(i+1)
+    for i in divisores: #1
+        divDivs = 0
+        for j in range(i): 
+            if (i)%(j+1)==0: 
+                divDivs+=1
+        if divDivs==2: primos.append(i)
+    primos.reverse()
+    return primos
 
-num = int(input("Escriba un número mayor que 1: ")); pre = num
-print("Descomposición en factores primos: ");
-print(getPrimos(num))
-for i in getPrimos(num):
-    if pre%i==0: 
-        print(f"{pre} {i}")
-        pre/=i
+num = int(input("Escriba un número mayor que 1: ")); tester = num
+print("Descomposición en factores primos: "); print(trueGetter(num)); end=False
+while not end:
+    for i in trueGetter(num):
+        if tester%i==0: 
+            print(f"{tester}", end="")
+            tester/=i
+            if tester==1:break
+            print(f" | {i}")
 #6G
 #6H
 #6I
