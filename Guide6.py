@@ -119,6 +119,13 @@ while n<=0: n = float(input("Ingrese un número POSITIVO: "))
 while suma<n:
     suma += float(input("Ingrese un número"))
 print("Has superado el límite")
+
 #6L
+minum = int(input("Ingrese el mínimo: ")); maxum = int(input("Ingrese el máximo: ")); i=minum+1; counter=0
+while i<=maxum and i>=minum:
+    i = int(input(f"Ingrese un número entre {minum} y {maxum}: "))
+    counter+=1
+print(f"Escribiste {counter-1} números entre {minum} y {maxum}")
+
 #6M
 #6N
