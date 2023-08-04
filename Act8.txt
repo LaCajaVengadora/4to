@@ -11,3 +11,21 @@ INSERT INTO empleados (nombre, apellidos, nacimiento, sexo, cargo, salario) VALU
     ('Elena', 'Rubio Cuestas', '1978/09/25', 'F', 'Secretaria', 1300),
     ('José', 'Calvo Sisman', '1990/11/12', 'M', 'Mozo', 1400),
     ('Margarita', 'Rodríguez Garcés', '1992/05/16', 'F', 'Secretaria', 1325);
+
+--1 ¿Qué empleado tiene un salario mayor a $1350?
+SELECT * FROM empleados WHERE salario>1350;
+
+--2 Realizar una consulta que devuelva el nombre, apellido y fecha de nacimiento de aquellos empleados que cobren más de $1350?
+SELECT nombre, apellidos, nacimiento FROM empleados WHERE salario>1350;
+
+--3 ¿Qué empleado tiene un sueldo comprendido entre $1350 y $1450?
+SELECT * FROM empleados WHERE 1450>salario AND salario>1350;
+
+--4 ¿Qué empleados son hombre?
+SELECT * FROM empleados WHERE sexo LIKE 'M';
+
+--5 ¿Cuáles son los nombres de los empleados que tienen cargo de Mozo?
+SELECT nombre FROM empleados WHERE cargo LIKE 'Mozo';
+
+--6 ¿Cuáles es el empleado de ID 4?
+SELECT * FROM empleados WHERE Id=4;
