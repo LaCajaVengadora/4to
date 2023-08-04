@@ -28,7 +28,32 @@ INSERT INTO producto VALUES(1, 'Disco duro SATA3 1TB', 86.99, 5),
                             (5, 'GeForce GTX 1080 Xtreme', 755, 6),
                             (6, 'Monitor 24 LED Full HD', 202, 1),
                             (7, 'Monitor 27 LED Full HD', 245.99, 1),
-                            (8, 'PortÃ¡til Yoga 520', 559, 2),
-                            (9, 'PortÃ¡til Ideapd 320', 444, 2),
+                            (8, 'Portatil Yoga 520', 559, 2),
+                            (9, 'Portatil Ideapd 320', 444, 2),
                             (10, 'Impresora HP Deskjet 3720', 59.99, 3),
                             (11, 'Impresora HP Laserjet Pro M26nw', 180, 3);
+
+
+Lista todas las columnas de la tabla producto.
+
+
+//TO-DO
+
+
+Lista el nombre de los productos, el precio en euros, el precio en dólares estadounidenses (USD) y en pesos argentinos (ARG). El precio que figura en la tabla es en euros.
+
+Lista los nombres y los precios de todos los productos de la tabla producto, redondeando el valor del precio.
+Lista los nombres y los precios de todos los productos de la tabla producto, truncando el valor del precio para mostrarlo sin ninguna cifra decimal.
+Lista el código de los fabricantes que tienen productos en la tabla producto, eliminando los códigos que aparecen repetidos.
+Lista los nombres de los fabricantes ordenados de forma descendente.
+Lista el nombre y el precio del producto más barato.
+Lista el nombre y el precio del producto más caro.
+Lista el nombre de todos los productos del fabricante cuyo código de fabricante es igual a 2.
+Lista los nombres de los fabricantes cuyo nombre empiece por la letra s.
+Lista los nombres de los fabricantes cuyo nombre termine por la vocal e.
+Lista los nombres de los fabricantes cuyo nombre contenga el carácter w.
+
+
+
+
+
