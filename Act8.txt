@@ -1,0 +1,7 @@
+CREATE TABLE empleados (Id PRIMAY KEY INT AUTO_INCREMENT, 
+                       nombre VARCHAR(20) NOT NULL,
+                       apellidos VARCHAR(40) NOT NULL,
+                       nacimiento DATE,
+                       sexo VARCHAR(1),
+                       cargo VARCHAR(25),
+                       salario INT);
