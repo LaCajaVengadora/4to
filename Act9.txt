@@ -53,12 +53,23 @@ Lista el código de los fabricantes que tienen productos en la tabla producto, e
 SELECT DISTINCT codigo_fabricante FROM producto;
 
 Lista los nombres de los fabricantes ordenados de forma descendente.
+SELECT nombre FROM fabricante ORDER BY nombre DESC ;
+
 Lista el nombre y el precio del producto más barato.
 Lista el nombre y el precio del producto más caro.
+SELECT MIN(precio) FROM producto;
+SELECT MAX(precio) FROM producto;
+
 Lista el nombre de todos los productos del fabricante cuyo código de fabricante es igual a 2.
+SELECT nombre FROM producto WHERE codigo_fabricante LIKE 2;
+
 Lista los nombres de los fabricantes cuyo nombre empiece por la letra s.
 Lista los nombres de los fabricantes cuyo nombre termine por la vocal e.
 Lista los nombres de los fabricantes cuyo nombre contenga el carácter w.
+SELECT nombre FROM fabricante WHERE nombre LIKE "s%";
+SELECT nombre FROM fabricante WHERE nombre LIKE "%e";
+SELECT nombre FROM fabricante WHERE nombre LIKE "%w%";
+
 
 
 
