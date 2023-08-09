@@ -70,6 +70,31 @@ SELECT nombre FROM fabricante WHERE nombre LIKE "s%";
 SELECT nombre FROM fabricante WHERE nombre LIKE "%e";
 SELECT nombre FROM fabricante WHERE nombre LIKE "%w%";
 
+// MULTITABLAS
+
+Devuelve una lista con el nombre del producto, precio y nombre de fabricante de todos los productos de la base de datos.
+SELECY fabricante.nombre, producto.nombre, producto.precio FROM producto 
+JOIN fabricante ON producto.codigo_fabricante LIKE fabricante.codigo;
+
+Devuelve una lista con el código del producto, nombre del producto, código del fabricante y nombre del fabricante, de todos los productos de la base de datos.
+SELECT fabricante.codigo, fabricante.nombre, producto.codigo,producto.nombre FROM producto 
+JOIN fabricante ON producto.codigo_fabricante LIKE fabricante.codigo;
+
+Devuelve una lista de todos los productos del fabricante Lenovo.
+SELECT * FROM producto WHERE producto.codigo_fabricante 
+LIKE (SELECT codigo FROM fabricante WHERE nombre LIKE "Lenovo");
+
+Devuelve un listado con todos los productos de los fabricantes Asus, Hewlett-Packardy Seagate.
+SELECT * from producto WHERE 
+  producto.codigo_fabricante LIKE (SELECT codigo FROM fabricante WHERE nombre LIKE "Asus")
+  OR producto.codigo_fabricante LIKE (SELECT codigo FROM fabricante WHERE nombre LIKE "Seagate")
+  OR producto.codigo_fabricante LIKE (SELECT codigo FROM fabricante WHERE nombre LIKE "Hewlett-Packard");
+
+Devuelve el nombre del producto, su precio y el nombre de su fabricante, del producto más barato.
+
+
+
+Devuelve el nombre del producto, su precio y el nombre de su fabricante, del producto más caro.
 
 
 
