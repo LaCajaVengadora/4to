@@ -41,10 +41,17 @@ Lista todas las columnas de la tabla producto.
 
 
 Lista el nombre de los productos, el precio en euros, el precio en dólares estadounidenses (USD) y en pesos argentinos (ARG). El precio que figura en la tabla es en euros.
+SELECT nombre, precio, precio*1.1, precio*315.25 FROM producto;
 
 Lista los nombres y los precios de todos los productos de la tabla producto, redondeando el valor del precio.
+SELECT nombre, ROUND(precio) FROM producto;
+
 Lista los nombres y los precios de todos los productos de la tabla producto, truncando el valor del precio para mostrarlo sin ninguna cifra decimal.
+SELECT nombre, CAST((precio * 100) as int) / 100 FROM producto;
+
 Lista el código de los fabricantes que tienen productos en la tabla producto, eliminando los códigos que aparecen repetidos.
+SELECT DISTINCT codigo_fabricante FROM producto;
+
 Lista los nombres de los fabricantes ordenados de forma descendente.
 Lista el nombre y el precio del producto más barato.
 Lista el nombre y el precio del producto más caro.
