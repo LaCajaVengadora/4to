@@ -92,12 +92,7 @@ SELECT producto.nombre, producto.precio, fabricante.nombre FROM producto
 JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo
 WHERE producto.precio = (SELECT MIN(precio) FROM producto);
 
-
 Devuelve el nombre del producto, su precio y el nombre de su fabricante, del producto más caro.
 SELECT producto.nombre, producto.precio, fabricante.nombre FROM producto
 JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo
 WHERE producto.precio = (SELECT MAX(precio) FROM producto);
-
-
-
-
