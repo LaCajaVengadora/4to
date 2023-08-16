@@ -35,10 +35,7 @@ INSERT INTO producto VALUES(1, 'Disco duro SATA3 1TB', 86.99, 5),
 
 
 Lista todas las columnas de la tabla producto.
-
-
-//TO-DO ¿¿¿¿¿ PRAGMA table_info(productos); ?????
-
+SELECT name FROM pragma_table_info('producto');
 
 Lista el nombre de los productos, el precio en euros, el precio en dólares estadounidenses (USD) y en pesos argentinos (ARG). El precio que figura en la tabla es en euros.
 SELECT nombre, precio, precio*1.1, precio*315.25 FROM producto;
