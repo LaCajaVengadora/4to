@@ -23,26 +23,41 @@ SELECT COUNT(*) FROM Empleado WHERE comision = 0;
 SELECT COUNT(nombre) FROM Empleado WHERE nombre LIKE "A%";
 
 Para cada oficio, obtener la suma de los salarios.
-            ------  TO-DO  ------      SELECT SUM(salario) FROM Empleado WHERE oficio LIKE (SELECT DISTINCT oficio FROM Empleado);      
+SELECT oficio, SUM(salario) FROM Empleado GROUP BY oficio;
 
 Mostrar los datos de los empleados cuyo salario sea mayor que la media de todos los salarios.
-
+SELECT * FROM Empleado WHERE salario >(SELECT AVG(salario) FROM Empleado);
 
 Mostrar el nombre del empleado que tiene el máximo salario.
+SELECT nombre FROM Empleado WHERE salario = (SELECT MAX(salario) FROM Empleado);
 
 Mostrar el nombre del empleado que tiene el mínimo salario.
+SELECT nombre FROM Empleado WHERE salario = (SELECT MIN(salario) FROM Empleado);
 
 Insertar en la tabla EMPLEADO un empleado con código 8, nombre "Cajas Carlos" de 32 años, oficio Analista, vive en Matagalpa, fecha de ingreso en la empresa el 22-06-2001, su salarios es de 15600, no tiene comisión y perteneces al departamento 2.
+INSERT INTO Empleado (Id, nombre, edad, oficio, dir, fechaIN, salario, codeDEP) VALUES
+          (8, "Cajas Carlos", 32, "Analista", "Matagalpa", "22/06/2001", 15600, 2);
 
 Insertar en la tabla DEPARTAMENTO un departamento cuyo número sea 50, de nombre GENERAL y cuya localización sea "Laboratorio".
+INSERT INTO Departamento (code, nombre, localizacion) VALUES (50,"General","Laboratorio");
 
 Insertar en la tabla DEPARTAMENTO un departamento cuyo número sea 60 y de nombre "PRUEBAS" y cuya localización sea "Puerto Cayo".
+INSERT INTO Departamento (code, nombre, localizacion) VALUES (60,"Pruebas","Puerto Cayo");
 
 Doblar el salario de todos los empleados del departamento 30.
+UPDATE Empleado SET salario=salario*2 WHERE codeDEP = 30;
 
 Cambiar todos los empleados del departamento 30 al departamento número 20.
+UPDATE Empleado SET codeDEP = 20 WHERE codeDEP = 30;
 
 Incrementar en un 10% el sueldo de los empleados del departamento 10.
+UPDATE Empleado SET salario=salario*0.1 WHERE codeDEP = 10;
+
 Cambiar la localización del departamento número 10 a "Zaragoza".
+UPDATE Departamento SET localizacion = "Zaragoza" WHERE code = 10;
+
 En la tabla DEPARTAMENTO borrar el departamento número 40.
+DELETE FROM Departamento WHERE code = 40;
+
 En la tabla EMPLEADO borrar todos los empleados que sean del departamento 20.
+DELETE FROM Empleado WHERE codeDEP = 20;
