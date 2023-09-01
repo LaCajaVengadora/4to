@@ -27,16 +27,23 @@ CREATE TABLE animales (
 
 INSERT INTO zoologico (IDzoo, nombre,ciudad,pais,tamagno,presupuesto) VALUES
 	(13, "TheChosenZoo", "CABA", "ARF", 100.5, 500000),
-    (51, "SecondoZoo", "NY", "USA", 35, 250000),
-    (33, "IES catholic Zoo", "CABA", "ARG", 10.2, 1500000),
-    (41, "MathZoo", "Paris", "FRA", 27, 3141492),
-    (7, "BoringZoo", "Säo Paulo", "BRA", 47, 500000),
-    (5, "5thZoo", "5thCountry", "5thState", 5, 5);
+    	(51, "SecondoZoo", "NY", "USA", 35, 250000),
+    	(33, "IES catholic Zoo", "CABA", "ARG", 10.2, 1500000),
+    	(41, "MathZoo", "Paris", "FRA", 27, 3141492),
+    	(7, "BoringZoo", "Säo Paulo", "BRA", 47, 500000),
+    	(5, "5thZoo", "5thCountry", "5thState", 5, 5);
 INSERT INTO especies (IDesp,nombrevulgar,nombrescience,familia,dangerExtinct) VALUES 
 	(1,"Perro","DogusCaninus","Caniforme",0),
-    (2, "Leon","KingusOfSabana","Feliforme",0),
-    (3, "Panda","VagusExtremus","Osus",1),
-    (4, "Gato","TinusGatunus","Feliforme",0),
-    (5, "Zorro","AstutusNocturnus","Caniforme",0),
-    (51, "Pez","AcuariusZeroSugar","Swimmer",0);
+    	(2, "Leon","KingusOfSabana","Feliforme",0),
+    	(3, "Panda","VagusExtremus","Osus",1),
+    	(4, "Gato","TinusGatunus","Feliforme",0),
+    	(5, "Zorro","AstutusNocturnus","Caniforme",0),
+    	(51, "Pez","AcuariusZeroSugar","Swimmer",0);
+INSERT INTO animales (IDanimal, zoo, esp, sex, born, pais, continente) VALUES 
+	(1, 13, 2, 0,"9-11-2001","Venezuela","América"),(2, 13, 5, 1,"9-11-2001","Colombia","América"),
+   	(3, 51, 3, 1,"4-1-2012","China","Asia"),(4, 51, 5, 1,"9-6-2001","China","Asia"),
+    	(5, 33, 4, 0,"1-1-2001","Argentina","América"),
+    	(6, 41, 1, 1,"9-11-2001","Venezuela","América"),(7, 41, 5, 0,"4-1-2012","Suiza","Europa"),
+    	(8, 7, 5, 0,"4-1-20121","Venezuela","América"),
+    	(9, 5, 6, 1,"9-11-2001","Suiza","Europa"),(21, 5, 1, 1,"9-11-1994","Colombia","América");
 
