@@ -1,0 +1,23 @@
+CREATE TABLE zoologico (
+  IDZoo INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  ciudad VARCHAR(100) NOT NULL,
+  pais VARCHAR(50) NOT NULL,
+  tamagno FLOAT() NOT NULL,
+  presupuesto DOUBLE() NOT NULL
+);
+CREATE TABLE especies (
+  IDEsp INT AUTO_INCREMENT PRIMARY KEY,
+  nombreVulgar VARCHAR(100) NOT NULL,
+  nombreScience VARCHAR(100) NOT NULL,
+  familia VARCHAR(100) NOT NULL,
+  extinct BIT NOT NULL
+);
+CREATE TABLE animales (
+  IDAnimal INT AUTO_INCREMENT PRIMARY KEY,
+  zoo INT NOT NULL, FOREIGN KEY (zoo) REFERENCES zoologico(IDZoo),
+  esp INT NOT NULL, FOREIGN KEY (esp) REFERENCES especies(IDEsp),
+  sex BIT NOT NULL,
+  born DATE NOT NULL,
+  pais VARCHAR(50) NOT NULL, continente VARCHAR(50) NOT NULL
+);
