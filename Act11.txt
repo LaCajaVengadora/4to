@@ -1,23 +1,42 @@
 CREATE TABLE zoologico (
-  IDZoo INT AUTO_INCREMENT PRIMARY KEY,
+  IDZoo INT PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
   ciudad VARCHAR(100) NOT NULL,
   pais VARCHAR(50) NOT NULL,
-  tamagno FLOAT() NOT NULL,
-  presupuesto DOUBLE() NOT NULL
+  tamagno FLOAT NOT NULL,
+  presupuesto DOUBLE NOT NULL
 );
+
 CREATE TABLE especies (
-  IDEsp INT AUTO_INCREMENT PRIMARY KEY,
+  IDEsp INT PRIMARY KEY,
   nombreVulgar VARCHAR(100) NOT NULL,
   nombreScience VARCHAR(100) NOT NULL,
   familia VARCHAR(100) NOT NULL,
-  extinct BIT NOT NULL
+  dangerExtinct BIT NOT NULL
 );
+
 CREATE TABLE animales (
-  IDAnimal INT AUTO_INCREMENT PRIMARY KEY,
-  zoo INT NOT NULL, FOREIGN KEY (zoo) REFERENCES zoologico(IDZoo),
-  esp INT NOT NULL, FOREIGN KEY (esp) REFERENCES especies(IDEsp),
-  sex BIT NOT NULL,
-  born DATE NOT NULL,
-  pais VARCHAR(50) NOT NULL, continente VARCHAR(50) NOT NULL
+  IDAnimal INT PRIMARY KEY,
+  zoo INT NOT NULL, esp INT NOT NULL,
+  sex BIT NOT NULL, born DATE NOT NULL,
+  pais VARCHAR(50) NOT NULL, continente VARCHAR(50) NOT NULL,
+  FOREIGN KEY (zoo) REFERENCES zoologico(IDZoo),
+  FOREIGN KEY (esp) REFERENCES especies(IDEsp)
 );
+
+
+INSERT INTO zoologico (IDzoo, nombre,ciudad,pais,tamagno,presupuesto) VALUES
+	(13, "TheChosenZoo", "CABA", "ARF", 100.5, 500000),
+    (51, "SecondoZoo", "NY", "USA", 35, 250000),
+    (33, "IES catholic Zoo", "CABA", "ARG", 10.2, 1500000),
+    (41, "MathZoo", "Paris", "FRA", 27, 3141492),
+    (7, "BoringZoo", "Säo Paulo", "BRA", 47, 500000),
+    (5, "5thZoo", "5thCountry", "5thState", 5, 5);
+INSERT INTO especies (IDesp,nombrevulgar,nombrescience,familia,dangerExtinct) VALUES 
+	(1,"Perro","DogusCaninus","Caniforme",0),
+    (2, "Leon","KingusOfSabana","Feliforme",0),
+    (3, "Panda","VagusExtremus","Osus",1),
+    (4, "Gato","TinusGatunus","Feliforme",0),
+    (5, "Zorro","AstutusNocturnus","Caniforme",0),
+    (51, "Pez","AcuariusZeroSugar","Swimmer",0);
+
